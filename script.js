@@ -1,4 +1,9 @@
-let currentIndex = 0;
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+});
 
 const images = document.querySelectorAll(".carousel-container img");
 const totalImages = images.length;
