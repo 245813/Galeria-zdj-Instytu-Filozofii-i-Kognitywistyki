@@ -19,42 +19,53 @@ header {
   font-size: 1.2rem;
 }
 
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.menu-toggle span {
-  width: 25px;
-  height: 3px;
-  background: white;
-}
-
-nav a, .nav-links a {
-  color: white;
-  text-decoration: none;
-  margin: 0 1rem;
-  font-weight: 500;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav-links {
-  display: none;
-  flex-direction: column;
-  background: #003366;
-  padding: 1rem;
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
-.nav-links.active {
-  display: flex;
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
+.menu-toggle {
+    font-size: 40px;
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #003366;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        padding: 10px;
+    }
+    .nav-links.show {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
 .hero {
   padding: 2rem;
   text-align: center;
   background: #e0efff;
 }
+
 
 .carousel {
   display: flex;
@@ -129,15 +140,10 @@ footer {
   padding: 1rem;
 }
 
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-  }
-
   .nav-desktop {
     display: none;
   }
-}
+
 
 
 
