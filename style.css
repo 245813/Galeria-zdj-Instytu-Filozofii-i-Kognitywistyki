@@ -18,7 +18,7 @@ header {
 .logo-container {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* logo i napis po lewej */
+    justify-content: flex-start;
 }
 
 .logo {
@@ -34,7 +34,7 @@ header {
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Menu na prawo */
+    justify-content: flex-end; 
     gap: 10px;
 }
 
@@ -121,10 +121,11 @@ header {
 .slider-container {
     display: flex;
     animation: slide 12s infinite;
+    width: 300%; 
 }
 
 .slider-container img {
-    width: 100%;
+    width: 33.33%; 
     height: auto;
     flex-shrink: 0;
     object-fit: cover;
@@ -136,11 +137,11 @@ header {
     }
 
     33% {
-        transform: translateX(-100%);
+        transform: translateX(-33.33%);
     }
 
     66% {
-        transform: translateX(-200%);
+        transform: translateX(-66.66%); 
     }
 
     100% {
@@ -148,9 +149,28 @@ header {
     }
 }
 
+
 .gallery {
     padding: 2rem;
     text-align: center;
+}
+
+#imageCounter {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0.3rem 1rem;
+    border-radius: 10px;
+}
+
+.grid img.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.grid img.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .grid {
@@ -213,4 +233,3 @@ footer {
     transform: rotate(90deg);
 }
 
-}
