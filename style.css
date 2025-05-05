@@ -15,30 +15,35 @@ header {
     align-items: center;
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+}
+
 .logo-container {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-start; 
 }
 
-.logo {
-    font-weight: 800;
-    font-size: 1.8rem;
-}
-
-.logo-img {
-    width: 150px;
-    margin-right: 10px;
-}
-
-.navbar {
+.menu-container {
     display: flex;
     align-items: center;
     justify-content: flex-end; 
-    gap: 10px;
 }
 
+
+.logo-img {
+    max-height: 150px;
+    margin-right: 10px;
+}
+
+
 .nav-links {
+    float: right;
     list-style: none;
     display: flex;
     gap: 50px;
@@ -52,6 +57,7 @@ header {
     font-weight: bold;
     position: relative;
 }
+
 
 .nav-links li a::after {
     content: "";
@@ -74,6 +80,7 @@ header {
     cursor: pointer;
 }
 
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -94,6 +101,7 @@ header {
         display: block;
     }
 }
+
 
 .hero {
     padding: 2rem;
@@ -232,4 +240,5 @@ footer {
 .fullscreen .close:hover {
     transform: rotate(90deg);
 }
+
 
